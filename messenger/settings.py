@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'lfmkkd$0%@2*dx3zfvl4at0_^0pc+kjsu0xl)uds6y#^qa74b-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://quiet-fjord-08489.herokuapp.com/']
 
 
 # Application definition
