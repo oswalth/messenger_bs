@@ -1,0 +1,29 @@
+{% load static %}
+<div class="message-bar">
+    {% if recipient is False%}
+        <h5>Open or create chat to start conversation</h5>
+    {% else %}
+        <div class="message-bar-header">
+            <img id="avatar" src="{% static '/images/avatar.png' %}" class="right">
+            <h5>{{ recipient }}</h5>
+        </div>
+        <div class="message-bar-content">
+            {% for message in messages %}
+                {% if user == message.sender %}
+                    <div class="message-container darker">
+                        <img id="avatar" src="{% static '/images/avatar.png' %}" class="right">
+                        <p>{{ message.content }}</p>
+                        <span class="time-left">{{ message.sent_at.hour }}:{{ message.sent_at.minute}}</span>
+                    </div>
+                {% else %}
+                    <div class="message-container">
+                        <img id="avatar" src="{% static '/images/avatar.png' %}">
+                        <p>{{ message.content }}</p>
+                        <span class="time-right">{{ message.sent_at.hour }}:{{ message.sent_at.minute}}</span>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% include 'input-form.html' %}
+    {% endif %}
+</div>

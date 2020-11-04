@@ -1,0 +1,172 @@
+#logo {
+     max-width: 75px;
+}
+
+#avatar {
+    max-width: 75px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+body{
+    background-color: #ebeff5;
+}
+
+.chat-app{
+    display: flex;
+    width: 100%;
+    margin: 0;
+    height: 90%;
+}
+
+.side-bar{
+    flex: 30%;
+}
+
+.chat-link,
+.chat-link:hover,
+.chat-link:focus,
+.chat-link.active
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+.chat-row{
+    background-color: #343a40;
+    padding: 7px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.chat-text{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.time-sent{
+    align-self: flex-start;
+}
+
+.message-bar{
+    flex: 70%;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+}
+
+.message-bar-header{
+    background-color: #343a40;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+    color: white;
+}
+
+.message-bar-header h5{
+    flex: 2;
+}
+
+.message-bar-content{
+    display: flex;
+    height: calc(100% - 300px);
+    flex: auto;
+    flex-direction: column-reverse;
+    align-content: flex-end;
+    z-index: 0;
+    overflow-y: auto;
+}
+
+.message-container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.message-container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.message-container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.message-container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+
+.reply {
+  height: 80px;
+  width: 100%;
+  background-color: #343a40;
+  padding: 10px 5px 10px 5px !important;
+  margin: 0 !important;
+  z-index: 1000;
+}
+
+.reply-send {
+  padding: 5px !important;
+}
+
+.reply-send i {
+  text-align: center;
+  padding: 5px !important;
+  color: #93918f;
+  cursor: pointer;
+}
+
+.reply-main {
+  padding: 2px 5px !important;
+}
+
+.reply-main textarea {
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+  padding: 5px !important;
+  outline: none;
+  border: none;
+  text-indent: 5px;
+  box-shadow: none;
+  height: 100%;
+  font-size: 16px;
+}
+
+.reply-main textarea:focus {
+  outline: none;
+  border: none;
+  text-indent: 5px;
+  box-shadow: none;
+}

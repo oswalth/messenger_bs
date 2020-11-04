@@ -1,0 +1,32 @@
+{% load static %}
+<form method="POST" action="" class="row reply">
+    {% csrf_token %}
+    <div class="col-sm-11 col-xs-11 reply-main">
+        {{ message_form.content }}
+<!--      <textarea class="form-control" rows="1" id="textarea-input"></textarea>-->
+    </div>
+    <div class="col-sm-1 col-xs-1 reply-send">
+      <i class="fa fa-send fa-2x" aria-hidden="true"></i>
+    </div>
+</form>
+<script>
+    sendButton = document.querySelector('.reply-send')
+    messageForm = document.querySelector('.row.reply')
+    textareaInput = document.querySelector('#textarea-input')
+
+    textareaInput.addEventListener('keypress', (e) => {
+        if (e.keyCode === 13) {
+            messageForm.submit()
+        }
+    })
+
+    messageForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+    })
+
+    sendButton.addEventListener('click', () => {
+        if (textareaInput.value !== '') {
+            messageForm.submit()
+        }
+    })
+</script>
